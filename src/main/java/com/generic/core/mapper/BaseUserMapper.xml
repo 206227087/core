@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.generic.core.mapper.BaseUserMapper">
+  <resultMap id="BaseResultMap" type="com.generic.core.entity.BaseUser">
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="contact" jdbcType="VARCHAR" property="contact" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+  </resultMap>
+  <insert id="insert" parameterType="com.generic.core.entity.BaseUser">
+    insert into base_user (id, user_name, gender, 
+      age, contact, address
+      )
+    values (#{id,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{contact,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.generic.core.entity.BaseUser">
+    insert into base_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="contact != null">
+        contact,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <resultMap id="BaseResultMap" type="com.generic.core.entity.BaseUser">
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="contact" jdbcType="VARCHAR" property="contact" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+  </resultMap>
+  <insert id="insert" parameterType="com.generic.core.entity.BaseUser">
+    insert into base_user (id, user_name, gender, 
+      age, contact, address
+      )
+    values (#{id,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{contact,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.generic.core.entity.BaseUser">
+    insert into base_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="contact != null">
+        contact,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
